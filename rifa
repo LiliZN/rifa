@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE>Rifa</TITLE>
+<script type="text/javascript">
+
+function aleatorio(a,b) {
+
+    return Math.round(Math.random()*(b-a)+parseInt(a));
+
+}
+
+	function calcula_aleatorio_formulario(){
+		minimo = document.f1.minim.value
+		maximo = document.f1.maxim.value
+		resultado = aleatorio(minimo,maximo)
+		document.f1.res.value = resultado
+	}
+	</script>
+
+</head>
+<body>
+<form name=f1>
+  Mínimo de participantes: 
+  <input maxLength=5 size=5 name=minim> <br>
+  Máximo de participantes: 
+  <input maxLength=5 size=5 name=maxim> <br><br>
+  <input onclick=calcula_aleatorio_formulario() type=button value="Generar número aleatorio"> 
+<br><br>
+Participante seleccionado: <input maxLength=5 size=5 name=res> 
+</form>
+</body></html>
